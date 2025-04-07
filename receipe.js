@@ -2,7 +2,6 @@ const categoriesContainer = document.getElementById('categories');
 const mealsContainer = document.getElementById('meals');
 const searchBox = document.getElementById('searchBox');
 
-// Fetch and display all categories
 function loadCategories() {
   fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
     .then(res => res.json())
@@ -21,7 +20,6 @@ function loadCategories() {
     });
 }
 
-// Load meals by category
 function loadMealsByCategory(category) {
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     .then(res => res.json())
@@ -39,7 +37,6 @@ function loadMealsByCategory(category) {
     });
 }
 
-// Live search
 searchBox.addEventListener('input', function () {
   const query = this.value.trim();
   if (!query) {
