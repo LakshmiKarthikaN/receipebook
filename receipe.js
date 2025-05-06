@@ -63,6 +63,4 @@ searchBox.addEventListener('input', function () {
       }
     });
 });
-
-// Initial load
 loadCategories();
